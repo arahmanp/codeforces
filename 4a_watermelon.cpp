@@ -2,7 +2,7 @@
 using namespace std;
 
 void solve() {
-    // Tulis solusi lo di sini
+    cout << "Hello";
 }
 
 int main() {
