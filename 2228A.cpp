@@ -30,7 +30,18 @@ int main() {
             else if(el == 2) count_2++;
         }
 
-        int ans = count_0 + std::min(count_1, count_2);
+        int ans = count_0;
+
+        while(count_1 != 0 && count_2 != 0) {
+            ans++;
+            count_1--;
+            count_2--;
+        }
+
+        while(count_1 >= 3) {
+            ans++;
+            count_1 -= 3;
+        }
 
         std::cout << ans << '\n';
     }
