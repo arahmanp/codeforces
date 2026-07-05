@@ -32,16 +32,13 @@ int main() {
 
         int ans = count_0;
 
-        while(count_1 != 0 && count_2 != 0) {
-            ans++;
-            count_1--;
-            count_2--;
-        }
+        int pairs = std::min(count_1, count_2);
+        ans += pairs;
+        count_1 -= pairs;
+        count_2 -= pairs;
 
-        while(count_1 >= 3) {
-            ans++;
-            count_1 -= 3;
-        }
+        ans += count_1 / 3;
+        ans += count_2 / 2;
 
         std::cout << ans << '\n';
     }
