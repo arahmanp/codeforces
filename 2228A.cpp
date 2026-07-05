@@ -38,7 +38,7 @@ int main() {
         count_2 -= pairs;
 
         ans += count_1 / 3;
-        ans += count_2 / 2;
+        ans += count_2 / 3;
 
         std::cout << ans << '\n';
     }
